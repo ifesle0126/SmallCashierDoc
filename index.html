@@ -1,0 +1,24 @@
+---
+layout: default
+title: 收银系统接口说明
+---
+<h2>{{ page.title }}</h2>
+<p>系统接口</p>
+<ul class="tags">
+    {% for tag in site.tags %}
+    <span style="margin:5px;">
+        <a href="#{{ tag[0] }}">{{ tag[0] }}</a> <sup>{{ tag[1].size }}</sup>
+    </span>
+    {% endfor %}
+</ul>
+<ul class="listing">
+    {% for tag in site.tags %}
+    <li class="listing-seperator" id="{{ tag[0] }}"><strong>{{ tag[0] }}</strong></li>
+    {% for post in tag[1] %}
+    <div class="listing-item">
+<!--        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>-->
+        <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </div>
+    {% endfor %}
+    {% endfor %}
+</ul>
