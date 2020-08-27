@@ -1,1 +1,1 @@
-# SmallCashierServer
+# SmallCashierDoc
